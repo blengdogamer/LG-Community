@@ -532,26 +532,6 @@ if (message.author.bot) return;
       message.author.sendEmbed(Embed11)
     }
 });
-client.on('message', msg => { 
-if (msg.content.startsWith(`$report`)) {
-// تعريف الارجس
-   let args = msg.content.split(" ").slice(1);
-// لو ما منشن احد يرد عيله
-  if (!msg.mentions.members.first()) return msg.reply(`يجب عليك منشن شخص`)
-// لو ما كتب تبليغ بيقوله اكتب تبليغ
-  if (!args[1]) return msg.reply(`امممم .. اكتب تبليغك`)
-// استبدل <الروم> بأسم الروم حقك
-  if (msg.guild.channels.find('name', 'reports')) {
-// استبدل هنا بعد
-    msg.guild.channels.find('name', 'reports').send(`
-  تبليغ على : ${msg.mentions.members.first()}
-  بلغ عليه من قبل : ${msg.member}
-  في روم : ${msg.channel.name}
-  السبب : **${args.join(" ").split(msg.mentions.members.first()).slice(' ')}**
-  `)
-  }
-}
-})
 //ban
   client.on('message', message => {
   if (message.author.codes) return;
