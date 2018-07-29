@@ -7,7 +7,6 @@ const moment = require("moment");
 const Canvas = require("canvas-prebuilt");
 const devs = ['347788375018700802','347788375018700802'];
 const adminprefix = "noonecandoitinlyme";
-const settings = require('./settings.json');
 
 
 
@@ -608,17 +607,6 @@ message.channel.send(`**✅ ${user.tag} kicked from the server ! ✈ **  `)
 
 }
 });
-        client.on('ready',() => {
-          console.log('I\'m Online\nI\'m Online')
-        });
-
-        client.on('message', message => {
-           if (message.content === 'ping') {
-
-           }
-
-        });
-
 
 
 
