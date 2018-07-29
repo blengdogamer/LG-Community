@@ -6,6 +6,7 @@ const jimp = require("jimp");
 const moment = require("moment");
 const devs = ['347788375018700802','347788375018700802'];
 const adminprefix = "noonecandoitinlyme";
+const Canvas = require("canvas-prebuilt");
 
 
 
