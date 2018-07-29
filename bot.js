@@ -4,7 +4,6 @@ const prefix = '$'
 const fs = require("fs");
 const jimp = require("jimp");
 const moment = require("moment");
-const Canvas = require("canvas-prebuilt");
 const devs = ['347788375018700802','347788375018700802'];
 const adminprefix = "noonecandoitinlyme";
 
