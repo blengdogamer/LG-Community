@@ -565,7 +565,7 @@ client.on('message', message => {
 `);
 
     }
-});
+})
 
 
 
