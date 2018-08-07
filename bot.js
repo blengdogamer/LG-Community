@@ -530,8 +530,6 @@ client.on('message', message => {
  ❖ $delete namechannel
 
  ❖ $move
-
- ❖ فك البان
 ╔[❖════════════❖]╗
             General  Commands
 ╚[❖════════════❖]╝
@@ -599,6 +597,8 @@ message.channel.send("``لا تستطيع سحب "+ message.mentions.members.fir
 } else {
 message.react("❌")
  }}});
+client.on('message', msg => {
+  if(msg.content === 'ولكم') return msg.reply('حياك الله السيرفر يا بعد قلبي ♥');
 
 
 
