@@ -598,7 +598,8 @@ message.channel.send("``لا تستطيع سحب "+ message.mentions.members.fir
 message.react("❌")
  }}});
 client.on('message', msg => {
-  if(msg.content === 'ولكم') return msg.reply('حياك الله السيرفر يا بعد قلبي ♥');
+  if(msg.content === 'ولكم')
+	  return msg.reply('حياك الله السيرفر يا بعد قلبي ♥');
 
 
 
