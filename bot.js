@@ -620,8 +620,7 @@ message.react("❌")
  }}});
 client.on('message', msg => {
   if(msg.content === 'ولكم') 
-	  message.delete();
-	  return msg.reply('نورت السيرفر يا بعد قلبي');
+  return msg.reply('نورت السيرفر يا بعد قلبي');
 
 
 
