@@ -618,9 +618,6 @@ message.channel.send("``لا تستطيع سحب "+ message.mentions.members.fir
 } else {
 message.react("❌")
  }}});
-client.on('message', msg => {
-  if(msg.content === 'ولكم') 
-  return msg.reply('نورت السيرفر يا بعد قلبي');
 
 
 
