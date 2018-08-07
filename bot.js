@@ -595,8 +595,6 @@ client.on('message' , najzx => {
         najzx.channel.sendEmbed(embed)
     }
   });
-let warns = JSON.parse(fs.readFileSync("./warnings.json", "utf8"));
-
 client.on('message', message =>{
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
