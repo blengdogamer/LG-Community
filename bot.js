@@ -4,7 +4,7 @@ const prefix = '$'
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`LG Communtiy`,"http://twitch.tv/S-F")
+client.user.setGame(`$help For Helping`,"http://twitch.tv/S-F")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -71,7 +71,7 @@ client.on('message', message => {
     if (message.content === "$mutechannel") {
                         if(!message.channel.guild) return message.reply(' This command only for servers');
 
-if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' ليس لديك صلاحيات');
+if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply(' ليس لديك صلاحيات');
            message.channel.overwritePermissions(message.guild.id, {
          SEND_MESSAGES: false
 
@@ -82,7 +82,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' لي
 if (message.content === "$unmutechannel") {
     if(!message.channel.guild) return message.reply(' This command only for servers');
 
-if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('ليس لديك صلاحيات');
+if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply('ليس لديك صلاحيات');
            message.channel.overwritePermissions(message.guild.id, {
          SEND_MESSAGES: true
 
@@ -104,7 +104,7 @@ client.on('message', msg => {
     if(command === "clear") {
         const emoji = client.emojis.find("name", ":wastebasket:")
     let textxt = args.slice(0).join("");
-    if(msg.member.hasPermission("MANAGE_MESSAGES")) {
+    if(msg.member.hasPermission("ADMINISTRATOR")) {
     if (textxt == "") {
         msg.delete().then
     msg.channel.send("***```ضع عدد الرسائل التي تريد مسحها 👌```***").then(m => m.delete(3000));
@@ -149,7 +149,7 @@ message.channel.sendEmbed(embed);
 });  
 client.on("message", (message) => {
     if (message.content.startsWith('$delete')) {
-        if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
+        if (!message.member.hasPermission('ADMINISTRATOR')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
 
         let args = message.content.split(' ').slice(1);
         let channel = message.client.channels.find('name', args.join(' '));
@@ -216,7 +216,7 @@ if(!message.channel.guild) return;
 if(message.content.startsWith(prefix + 'move')) {
  if (message.member.hasPermission("MOVE_MEMBERS")) {
  if (message.mentions.users.size === 0) {
- return message.channel.send("``لاستخدام الأمر اكتب هذه الأمر : " +prefix+ "move [USER]``")
+ return message.channel.send("``لاستخدام الأمر اكتب هذه الأمر : " $prefix move [mention] ")
 }
 if (message.member.voiceChannel != null) {
  if (message.mentions.members.first().voiceChannel != null) {
@@ -242,7 +242,7 @@ message.channel.send("``لا تستطيع سحب "+ message.mentions.members.fir
 message.react("❌")
  }}});
  client.on('guildBanAdd', function(guild) {
-            const rebellog = client.channels.find("name", "banlog"),
+            const rebellog = client.channels.find("banlog", "log"),
             Onumber = 3,
   Otime = 10000
 guild.fetchAuditLogs({
@@ -402,7 +402,7 @@ ${message.author.tag} تمت معاقبتك بواسطة
 		.setColor("RANDOM")
 	user.send( muteembeddm);
   }
-if(command === `unmute`) {
+if(command === `تكلم`) {
   if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.sendMessage("**ليس لديك صلاحية لفك عن الشخص ميوت**:x: ").then(m => m.delete(5000));
 if(!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES")) return message.reply("**ما عندي برمشن**").then(msg => msg.delete(6000))
 
@@ -422,7 +422,7 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES")) return m
 
 });
 client.on("guildMemberAdd", function(member) {
-    const wc = member.guild.channels.find("name", "welcome")
+    const wc = member.guild.channels.find("name", "ghghhgdhuj")
         const embed = new Discord.RichEmbed()
         .setColor('B90C0C')
         .setAuthor(member.user.tag, member.user.avatarURL)
@@ -516,7 +516,7 @@ client.on('message', message => {
     var reason = message.content.split(' ').slice(2).join(' ');
     if(message.content.startsWith(prefix + 'report')) {
         if(message.author.bot) return;
-        if(!message.guild.channels.find('name', 'التبليغ')) return message.channel.send('**الرجاء صنع روم باسم (اسم الروم) لارسال الريبورتات اليه**').then(msg => msg.delete(5000));
+        if(!message.guild.channels.find('name', 'reports')) return message.channel.send('**الرجاء صنع روم باسم (reports) لارسال الريبورتات اليه**').then(msg => msg.delete(5000));
     if(!name1) return message.reply('**منشن اسم الشخص الي تبي تبلغ عليه**').then(msg => msg.delete(3000))
         message.delete();
     if(!reason) return message.reply('**اكتب وش سوى**').then(msg => msg.delete(3000))
@@ -532,7 +532,83 @@ client.on('message', message => {
     message.reply('**شكرا على تبليغك**').then(msg => msg.delete(3000));
     }
 });
+client.on('message', message => {
+    if (message.author.bot) return;
+     if (message.content === prefix + "help") {
+		 message.channel.send('**تم ارسال الرسالة في الخاص**');
+            
+	
+		 
 
+
+ message.author.sendMessage(`
+╔[❖════════════❖]╗
+             Prefix = ' $ '
+╚[❖════════════❖]╝
+
+╔[❖════════════❖]╗
+             Admin Commands
+╚[❖════════════❖]╝
+
+ ❖ لتكيك شخص  $كيك
+
+ ❖ لتبنيد شخص $طرد
+ 
+ ❖ لعقوبة التكلم ميوت
+
+ ❖ لفك الميوت تكلم
+
+ ❖ $text لي انشاء روم صوتي
+
+ ❖ $voice لي انشاء روم صوتي
+  
+ ❖ *bc للبرودكاست
+
+ ❖ $mutechannel
+
+ ❖ $unmutechannel
+
+ ❖ $clear 100
+
+ ❖ $delete namechannel
+╔[❖════════════❖]╗
+            General  Commands
+╚[❖════════════❖]╝
+
+❖ $roll [number]
+
+❖ $avatar
+
+❖ $server
+
+❖ $invites
+
+❖ $ping
+
+❖ $id
+
+❖ $ping
+
+❖ $bans
+
+❖ اسحب الجميع
+
+❖ عدد الاعضاء
+
+❖ $rooms
+
+❖ $move mention
+
+❖ رابط
+
+
+وشكرا لكم :heart:
+==================================================================
+
+`);
+
+    }
+})
 
 
 
