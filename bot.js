@@ -390,18 +390,6 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES")) return m
   }
 
 });
-client.on("guildMemberAdd", function(member) {
-    const wc = member.guild.channels.find("name", "ghghhgdhuj")
-        const embed = new Discord.RichEmbed()
-        .setColor('B90C0C')
-        .setAuthor(member.user.tag, member.user.avatarURL)
- .setDescription('*** يا مرحبا بك في سيرفر :rose: ***')
-.setThumbnail(member.avatarURL)
-  .setImage('https://cdn.discordapp.com/attachments/448478798065696769/472789633428750347/welcome.gif')
-        .setTimestamp()
-        return wc.sendEmbed(embed);
-        
-});
 client.on('message', message => { //invite
 if(message.content.startsWith('رابط')) {
      if(!message.channel.guild) return;
