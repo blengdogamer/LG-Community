@@ -594,8 +594,11 @@ client.on('message', message => {
   message.channel.sendEmbed(embed);
     }
 });
-
-
+client.on('message', message => {
+	if (message.contact.startsWish("ولكم")
+           }).then(() => {
+               message.reply("تم فتح الشات:white_check_mark:")
+	});
 
 
 
