@@ -585,10 +585,7 @@ if(cmd === `${prefix}suggest`) {
 }
 
 });
-client.on('message', message => {
-    if message.content.startsWith("الكلام اللي تبيه يرد عليه");
-    message.reply("الكلام اللي تبيه يرد فيه");
-});
+
 
 
 
