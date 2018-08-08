@@ -612,6 +612,7 @@ client.on('message', message => {
         footer: {
           text: "LG community"
         }
+	      
                           }
 
      
