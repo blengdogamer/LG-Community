@@ -594,13 +594,6 @@ client.on('message', message => {
   message.channel.sendEmbed(embed);
     }
 });
-client.on('voiceStateUpdate', (old, now) => {
-  const channel = client.channels.get('476851253469511680');
-  const currentSize = channel.guild.members.filter(m => m.voiceChannel).size;
-  const size = channel.name.match(/\[\s(\d+)\s\]/);
-  if (!size) return channel.setName(`Voice Online: ${currentSize}`);
-  if (currentSize !== size) channel.setName(`Voice Online: ${currentSize}`);
-});
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
     if(message.content.includes('ولكم')){
@@ -610,9 +603,9 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "حياك الله السيرفر نورتنا السيرفر :rose: ",
         footer: {
-          text: "LG community"
+          text: "By Abo Khalil"
         }
-	      
+      }}).then(msg => {msg.delete(10000000000000000000000)});
                           }
 
      
