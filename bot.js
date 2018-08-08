@@ -597,7 +597,6 @@ client.on('message', message => {
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
     if(message.content.includes('ولكم')){
-        message.delete()
       message.channel.sendMessage("", {embed: {
         title: "حياك الله السيرفر",
         color: 0x06DF00,
