@@ -612,7 +612,6 @@ client.on('message', message => {
         footer: {
           text: "By Abo Khalil"
         }
-      }}).then(msg => {msg.delete(4000)});
                           }
 
      
