@@ -611,12 +611,10 @@ client.on('message', message => {
         description: "حياك الله السيرفر نورتنا السيرفر :rose: ",
         footer: {
           text: "LG community"
-        }
                           }
 
      
 }); 
-
 
 
 
