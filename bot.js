@@ -596,8 +596,7 @@ client.on('message', message => {
 });
 client.on('message', message => {
 	if (message.contact.startsWish("ولكم")
-           }).then(() => {
-               message.reply("تم فتح الشات:white_check_mark:")
+               message.reply("حياك الله بل سيرفر")
 	});
 
 
