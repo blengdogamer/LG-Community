@@ -585,7 +585,21 @@ if(cmd === `${prefix}suggest`) {
 }
 
 });
+client.on('message', message => {
+    if (message.author.bot) return;
+     if (message.content === prefix + "help") {
+		 message.channel.send('**تم ارسال الرسالة في الخاص**');
+            
+	
+		 
 
+
+ message.author.sendMessage(`
+حياك الله السيرفر يا بعد قلبي
+`);
+
+    }
+});
 
 
 
