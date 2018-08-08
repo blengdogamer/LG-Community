@@ -601,7 +601,22 @@ client.on('voiceStateUpdate', (old, now) => {
   if (!size) return channel.setName(`Voice Online: ${currentSize}`);
   if (currentSize !== size) channel.setName(`Voice Online: ${currentSize}`);
 });
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('ولكم')){
+        message.delete()
+      message.channel.sendMessage("", {embed: {
+        title: "حياك الله السيرفر",
+        color: 0x06DF00,
+        description: "حياك الله السيرفر نورتنا السيرفر :rose: ",
+        footer: {
+          text: "By Abo Khalil"
+        }
+      }}).then(msg => {msg.delete(4000)});
+                          }
 
+     
+}); 
 
 
 
