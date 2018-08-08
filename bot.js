@@ -585,7 +585,12 @@ if(cmd === `${prefix}suggest`) {
 }
 
 });
+client.on('message', message => {
+    if message.content.startsWith("ولكم");
+    message.reply("حياك الله السيرفر اتمنا انك تقرا القوانين");
+}
 
+});
 
 
 
