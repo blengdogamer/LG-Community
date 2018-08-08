@@ -594,11 +594,13 @@ client.on('message', message => {
   message.channel.sendEmbed(embed);
     }
 });
-client.on('message', message => {
-	if (message.contact.startsWish("ولكم")
-               message.reply("حياك الله بل سيرفر")
-	});
-
+client.on('voiceStateUpdate', (old, now) => {
+  const channel = client.channels.get('476851253469511680');
+  const currentSize = channel.guild.members.filter(m => m.voiceChannel).size;
+  const size = channel.name.match(/\[\s(\d+)\s\]/);
+  if (!size) return channel.setName(`Voice Online: ${currentSize}`);
+  if (currentSize !== size) channel.setName(`Voice Online: ${currentSize}`);
+});
 
 
 
