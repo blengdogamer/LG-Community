@@ -589,7 +589,7 @@ client.on('message', message => {
             if (message.content.startsWith(prefix + "ولكم")) {
      let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
-.addField(' حياك الله في سيرفر يا بعد قلبي ')
+.addField(' حياك الله في سيرفر يا بعد قلبي :two_hearts: ')
 .setColor('#00000f')
   message.channel.sendEmbed(embed);
     }
