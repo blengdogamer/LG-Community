@@ -605,7 +605,7 @@ client.on('message', message => {
         footer: {
           text: "LG community"
         }
-      }}).then(msg => {msg.delete(0)});
+      }})
                           }
 
      
