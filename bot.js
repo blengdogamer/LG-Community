@@ -609,7 +609,19 @@ client.on('message', message => {
 
      
 }); 
+client.on('guildMemberAdd', member => {
+    const botCount = member.guild.members.filter(m=>m.user.bot).size
+    const memberCount = [member.guild.memberCount] - [botCount]
+    client.channels.get('476851253469511680').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
+    client.channels.get('476876008667217920').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
+});
 
+client.on('guildMemberRemove', member => {
+    const botCount = member.guild.members.filter(m=>m.user.bot).size
+    const memberCount = [member.guild.memberCount] - [botCount]
+    client.channels.get('476851253469511680').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
+    client.channels.get('476876008667217920').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
+});
 
 
   
