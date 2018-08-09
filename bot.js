@@ -182,19 +182,6 @@ client.on('message', message => {
   .catch(console.error);
 }
 });
-client.on('message', function(message) {
-    if (message.channel.type === "dm") {
-        if (message.author.id === client.user.id) return;
-        var HeMa = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .setTimestamp()
-        .setTitle('``I have received a new DM !``')
-        .setThumbnail(`${message.author.avatarURL}`)
-        .setDescription(`\n\n\`\`\`${message.content}\`\`\``)
-        .setFooter(`From **${message.author.tag} (${message.author.id})**`)
-    client.channels.get("477232594446974998").send({embed:HeMa});
-    }
-});
      client.on('message', message => {
 if (message.content.startsWith("اسحب الجميع")) {
        if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send('**انت لا تملك الصلاحيات المطلوبه**');
