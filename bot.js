@@ -459,7 +459,7 @@ message.channel.send(`**✅ ${user.tag} banned from the server ! ✈ **  `)
   
   if (message.mentions.users.size < 1) return message.reply("**منشن شخص**");
   if (!message.guild.member(user)
-  .bannable) return message.reply("**يجب ان تكون رتبة البوت اعلي من رتبه الشخص المراد طرده**");
+  .bannable) return message.reply("**يجب ان تكون رتبة البوت اعلي من رتبه الشخص المراد تكيكه**");
 
 
   message.guild.member(user).kick(7, user);
@@ -474,9 +474,9 @@ client.on('message', message => {
     if(message.content.startsWith(prefix + 'report')) {
         if(message.author.bot) return;
         if(!message.guild.channels.find('name', 'reports')) return message.channel.send('**الرجاء صنع روم باسم (reports) لارسال الريبورتات اليه**').then(msg => msg.delete(5000));
-    if(!name1) return message.reply('**منشن اسم الشخص الي تبي تبلغ عليه**').then(msg => msg.delete(3000))
+    if(!name1) return message.reply('**منشن اسم الشخص يلي تبي تبلغ عليه**').then(msg => msg.delete(3000))
         message.delete();
-    if(!reason) return message.reply('**اكتب وش سوى**').then(msg => msg.delete(3000))
+    if(!reason) return message.reply('**اكتب السبب**').then(msg => msg.delete(3000))
         message.delete();
     var abod = new Discord.RichEmbed()
     .setTitle(`:page_with_curl: **[REPORT]** By: ${message.author.tag}`)
@@ -486,7 +486,7 @@ client.on('message', message => {
     .setFooter(`${message.author.username}#${message.author.discriminator}`, message.author.avatarURL)
     .setTimestamp()
         message.guild.channels.find('name', 'reports').sendEmbed(abod)
-    message.reply('**شكرا على تبليغك**').then(msg => msg.delete(3000));
+    message.reply('**شكرا لك علي تبليغك**').then(msg => msg.delete(3000));
     }
 });
 client.on('message', message => {
@@ -586,15 +586,6 @@ if(cmd === `${prefix}suggest`) {
 
 });
 client.on('message', message => {
-            if (message.content.startsWith(prefix + "ولكم")) {
-     let embed = new Discord.RichEmbed()
-.setThumbnail(message.author.avatarURL)
-.addField(' حياك الله في سيرفر يا بعد قلبي :two_hearts: ')
-.setColor('#00000f')
-  message.channel.sendEmbed(embed);
-    }
-});
-client.on('message', message => {
     var args = message.content.split(/[ ]+/)
     if(message.content.includes('ولكم')){
       message.channel.sendMessage("", {embed: {
@@ -622,7 +613,22 @@ client.on('guildMemberRemove', member => {
     client.channels.get('476851253469511680').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
     client.channels.get('476876008667217920').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
 });
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('مين صاحب البوت')){
+      message.channel.sendMessage("", {embed: {
+        title: "KaMAL:heart:",
+        color: 0x06DF00,
+        description: "كمال مبرمجي وافتخر",
+        footer: {
+          text: "LG community for ever"
+        }
+      }})
+                          }
 
+     
+}); 
+	
 
   
   
