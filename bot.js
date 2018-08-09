@@ -619,7 +619,7 @@ client.on('message', message => {
       message.channel.sendMessage("", {embed: {
         title: "KaMAL:heart:",
         color: 0x06DF00,
-        description: "كمال مبرمجي وافتخر",
+        description: "! ᴸᴳ KaMAL,! ᴸᴳ Abo Khalil",
         footer: {
           text: "LG community for ever"
         }
