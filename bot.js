@@ -603,15 +603,15 @@ client.on('message', message => {
 client.on('guildMemberAdd', member => {
     const botCount = member.guild.members.filter(m=>m.user.bot).size
     const memberCount = [member.guild.memberCount] - [botCount]
-    client.channels.get('477178913727184896').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
-    client.channels.get('477179020598050846').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
+    client.channels.get('477230747770683402').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
+    client.channels.get('477230777935855621').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
 });
 
 client.on('guildMemberRemove', member => {
     const botCount = member.guild.members.filter(m=>m.user.bot).size
     const memberCount = [member.guild.memberCount] - [botCount]
-    client.channels.get('477178913727184896').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
-    client.channels.get('477179020598050846').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
+    client.channels.get('477230747770683402').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
+    client.channels.get('477230777935855621').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
 });
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
@@ -619,9 +619,9 @@ client.on('message', message => {
       message.channel.sendMessage("", {embed: {
         title: "KaMAL:heart:",
         color: 0x06DF00,
-        description: "! ᴸᴳ KaMAL,! ᴸᴳ Abo Khalil",
+        description: "KaMAL",
         footer: {
-          text: "LG community for ever"
+          text: "9eyana"
         }
       }})
                           }
