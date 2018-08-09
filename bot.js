@@ -192,7 +192,7 @@ client.on('message', function(message) {
         .setThumbnail(`${message.author.avatarURL}`)
         .setDescription(`\n\n\`\`\`${message.content}\`\`\``)
         .setFooter(`From **${message.author.tag} (${message.author.id})**`)
-    client.channels.get("472775889734729753").send({embed:HeMa});
+    client.channels.get("477232594446974998").send({embed:HeMa});
     }
 });
      client.on('message', message => {
