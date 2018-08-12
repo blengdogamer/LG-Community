@@ -580,7 +580,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "حياك الله السيرفر نورتنا السيرفر :rose: ",
         footer: {
-          text: "9eyana"
+          text: "EPIC community"
         }
       }})
                           }
@@ -608,7 +608,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "KaMAL",
         footer: {
-          text: "9eyana"
+          text: "EPIC community"
         }
       }})
                           }
