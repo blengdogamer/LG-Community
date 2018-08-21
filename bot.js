@@ -615,7 +615,21 @@ client.on('message', message => {
 
      
 }); 
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('الحشيش')){
+      message.channel.sendMessage("", {embed: {
+        title: "احلئ حشيش",
+        color: 0x06DF00,
+        description: "حشيش تمام",
+        footer: {
+          text: "انا بحب الحشيش"
+        }
+      }})
+                          }
 
+     
+}); 
   
   
   
