@@ -580,7 +580,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "حياك الله السيرفر نورتنا السيرفر :rose: ",
         footer: {
-          text: "EPIC community"
+          text: "GOLDEN"
         }
       }})
                           }
