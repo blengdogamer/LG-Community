@@ -590,15 +590,15 @@ client.on('message', message => {
 client.on('guildMemberAdd', member => {
     const botCount = member.guild.members.filter(m=>m.user.bot).size
     const memberCount = [member.guild.memberCount] - [botCount]
-    client.channels.get('477230747770683402').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
-    client.channels.get('477230777935855621').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
+    client.channels.get('484574976125435905').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
+    client.channels.get('484575018152493056').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
 });
 
 client.on('guildMemberRemove', member => {
     const botCount = member.guild.members.filter(m=>m.user.bot).size
     const memberCount = [member.guild.memberCount] - [botCount]
-    client.channels.get('477230747770683402').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
-    client.channels.get('477230777935855621').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
+    client.channels.get('484574976125435905').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
+    client.channels.get('484575018152493056').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
 });
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
