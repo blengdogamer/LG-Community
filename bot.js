@@ -327,7 +327,7 @@ if (!message.content.startsWith(prefix)) return;
 	let command = message.content.split(" ")[0];
 	 command = command.slice(prefix.length);
 	let args = message.content.split(" ").slice(1);
-	if (command == "ميوت") {
+	if (command == "$mute") {
 		if (!message.channel.guild) return;
 		if(!message.guild.member(message.author).hasPermission("MANAGE_MESSAGES")) return message.reply("انت لا تملك صلاحيات !! ").then(msg => msg.delete(5000));
 		if(!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES")) return message.reply("البوت لايملك صلاحيات ").then(msg => msg.delete(5000));;
@@ -358,7 +358,7 @@ ${message.author.tag} تمت معاقبتك بواسطة
 		.setColor("RANDOM")
 	user.send( muteembeddm);
   }
-if(command === `تكلم`) {
+if(command === `$unmute`) {
   if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.sendMessage("**ليس لديك صلاحية لفك عن الشخص ميوت**:x: ").then(m => m.delete(5000));
 if(!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES")) return message.reply("**ما عندي برمشن**").then(msg => msg.delete(6000))
 
@@ -410,7 +410,7 @@ if (message.author.bot) return;
 
   let args = message.content.split(" ").slice(1);
 
-  if (command == "طرد") {
+  if (command == "ban") {
                if(!message.channel.guild) return message.reply('** This command only for servers**');
          
   if(!message.guild.member(message.author).hasPermission("BAN_MEMBERS")) return message.reply("**انت لا تملك الصلاحيات المطلوبه**");
@@ -437,7 +437,7 @@ message.channel.send(`**✅ ${user.tag} banned from the server ! ✈ **  `)
 
   let args = message.content.split(" ").slice(1);
 
-  if (command == "كيك") {
+  if (command == "kick") {
                if(!message.channel.guild) return message.reply('** This command only for servers**');
          
   if(!message.guild.member(message.author).hasPermission("KICK_MEMBERS")) return message.reply("**انت لا تملك الصلاحيات المطلوبه**");
@@ -494,13 +494,13 @@ client.on('message', message => {
              Admin Commands
 ╚[❖════════════❖]╝
 
- ❖ لتكيك شخص  $كيك
+ ❖ $kick لتكيك شخص
 
- ❖ لتبنيد شخص $طرد
+ ❖ $ban لتبنيد شخص
  
- ❖ لعقوبة التكلم ميوت
+ ❖ $mute
 
- ❖ لفك الميوت تكلم
+ ❖ $unmute
 
  ❖ $text لي انشاء روم صوتي
 
