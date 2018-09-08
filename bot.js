@@ -580,7 +580,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "حياك الله السيرفر نورتنا السيرفر :rose: ",
         footer: {
-          text: "GOLDEN"
+          text: "وشكرا لكم :heart:"
         }
       }})
                           }
@@ -590,15 +590,15 @@ client.on('message', message => {
 client.on('guildMemberAdd', member => {
     const botCount = member.guild.members.filter(m=>m.user.bot).size
     const memberCount = [member.guild.memberCount] - [botCount]
-    client.channels.get('484574976125435905').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
-    client.channels.get('484575018152493056').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
+    client.channels.get('487834664485257227').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
+    client.channels.get('487834725189287968').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
 });
 
 client.on('guildMemberRemove', member => {
     const botCount = member.guild.members.filter(m=>m.user.bot).size
     const memberCount = [member.guild.memberCount] - [botCount]
-    client.channels.get('484574976125435905').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
-    client.channels.get('484575018152493056').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
+    client.channels.get('487834664485257227').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
+    client.channels.get('487834725189287968').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
 });
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
@@ -608,22 +608,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "KaMAL",
         footer: {
-          text: "EPIC community"
-        }
-      }})
-                          }
-
-     
-}); 
-client.on('message', message => {
-    var args = message.content.split(/[ ]+/)
-    if(message.content.includes('الحشيش')){
-      message.channel.sendMessage("", {embed: {
-        title: "احلئ حشيش",
-        color: 0x06DF00,
-        description: "حشيش تمام",
-        footer: {
-          text: "انا بحب الحشيش"
+          text: "ProSKiilers"
         }
       }})
                           }
