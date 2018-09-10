@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = '$'
+const devs = ['347788375018700802','347788375018700802'];
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -611,6 +612,7 @@ msg.reply('هلا حبي')
 client.on('message', message => {
     
     if(message.author.bot) return;
+    if (!devs.includes(message.author.id)) return;
     if(message.channel.type === 'dm') return;
     
     var command = message.content.toLowerCase().split(" ")[0]; // حقوق الفا كوودز Alpha Codes.
