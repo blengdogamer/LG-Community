@@ -503,7 +503,7 @@ client.on('message', message => {
 
  ❖ $unmute
 
- ❖ $text لي انشاء روم صوتي
+ ❖ $text لي انشاء روم كتابي
 
  ❖ $voice لي انشاء روم صوتي
   
@@ -516,6 +516,9 @@ client.on('message', message => {
  ❖ $clear 100
 
  ❖ $delete namechannel
+
+ ❖ $role
+
 ╔[❖════════════❖]╗
             General  Commands
 ╚[❖════════════❖]╝
@@ -532,8 +535,6 @@ client.on('message', message => {
 
 ❖ $id
 
-❖ $ping
-
 ❖ $bans
 
 ❖ اسحب الجميع
@@ -541,9 +542,6 @@ client.on('message', message => {
 ❖ عدد الاعضاء
 
 ❖ $rooms
-
-❖ رابط
-
 
 وشكرا لكم :heart:
 ==================================================================
