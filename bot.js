@@ -392,7 +392,7 @@ if (message.author.bot) return;
     const Embed11 = new Discord.RichEmbed()
         .setColor("#5016f3")
         .setDescription("تم ارسالك في الخاص")
-   .setFooter("LG Community",'https://cdn.pg.sa/NJ3OyQVKpY.jpg')
+   .setFooter("TIGER",'https://discord.gg/5JyVWQZ')
                    .setTimestamp()
                 message.channel.send('**تم الارسال رابط  سيرفر في الخاص**');
 
@@ -507,8 +507,6 @@ client.on('message', message => {
 
  ❖ $voice لي انشاء روم صوتي
   
- ❖ *bc للبرودكاست
-
  ❖ $mutechannel
 
  ❖ $unmutechannel
@@ -908,28 +906,6 @@ client.on('message', message => {
         }
     }
 });  
-client.on('message', message => {
-    if (message.author.id === client.user.id) return;
-    if (message.guild) {
-   let embed = new Discord.RichEmbed()
-    let args = message.content.split(' ').slice(1).join(' ');
-if(message.content.split(' ')[0] == prefix + 'bc') {
-    if (!args[1]) {
-return;
-}
-        message.guild.members.forEach(m => {
-   if(!message.member.hasPermission('ADMINISTRATOR')) return;
-            var bc = new Discord.RichEmbed()
-            .addField(' » الرسالة : ', args)
-            .setColor('#ff0000')
-            // m.send(`[${m}]`);
-            m.send(`${m}`,{embed: bc});
-        });
-    }
-    } else {
-        return;
-    }
-}); 
 client.on('message', message=>{
     if (message.content ==='&add-colors'){
         if (message.channel.guild){
