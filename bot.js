@@ -53,14 +53,14 @@ client.on('message', message => {
     }
 });
 client.on('message', message => {
-if (message.content.startsWith(prefix+"text")) {
+if (message.content.startsWith(prefix+"create_text")) {
     var args = message.content.split(" ").slice(1);
     var argrst = args.join(' ');
                 message.guild.createChannel(`${argrst}`, 'text')
       }
 });
 client.on('message', message => {
-if (message.content.startsWith(prefix+"voice")) {
+if (message.content.startsWith(prefix+"create_voice")) {
     var args = message.content.split(" ").slice(1);
     var argrst = args.join(' ');
                 message.guild.createChannel(`${argrst}`,'voice')
@@ -503,9 +503,9 @@ client.on('message', message => {
 
  ❖ $unmute
 
- ❖ $text لي انشاء روم كتابي
+ ❖ $create_text لي انشاء روم كتابي
 
- ❖ $voice لي انشاء روم صوتي
+ ❖ $create_voice لي انشاء روم صوتي
   
  ❖ $mutechannel
 
@@ -516,6 +516,8 @@ client.on('message', message => {
  ❖ $delete namechannel
 
  ❖ $role
+
+ ❖ $bc
 
 ╔[❖════════════❖]╗
             General  Commands
