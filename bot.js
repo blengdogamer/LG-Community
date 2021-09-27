@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = 'W'
+const prefix = '$'
 const devs = ['347788375018700802','347788375018700802'];
 
 client.on('ready', () => {
