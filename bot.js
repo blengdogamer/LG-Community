@@ -5,7 +5,7 @@ const devs = ['347788375018700802','347788375018700802'];
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`$help For Helping`,"http://twitch.tv/thewejdan_")
+client.user.setGame(`Nony is my bestfriend`,"http://twitch.tv/thewejdan_")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
