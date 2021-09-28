@@ -999,6 +999,6 @@ client.on('messageCreate', async (message) => {
       message.reply({ embeds: [embed] })
 
   }
-})
+});
 
 client.login(process.env.BOT_TOKEN);
