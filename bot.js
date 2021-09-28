@@ -967,4 +967,38 @@ message.guild.members.forEach(m => {
  
 });
 
+const moment = require('moment')
+
+client.on('messageCreate', async (message) => {
+  if (message.content.startsWith(prefix + 'fetch')) {
+    let args = message.content.split(' ').slice(1).join(' ')
+    if (!args) return message.reply("Please enter the user ID")
+    let user = await client.users.fetch(args).catch(() => null)
+    if (!user) return message.reply("Invaild User")
+
+    let embed = new Discord.MessageEmbed()
+
+      .setAuthor(user.tag, user.avatarURL({ dynamic: true }))
+
+      .setTitle(`Information about ${user.username}`)
+
+      .addField('Name', `${user.tag}`, true)
+
+      .addField('ID', `${user.id}`, true)
+
+      .setThumbnail(user.avatarURL({ dynamic: true }))
+
+      .addField('Created At',
+      `\`${moment(user.createdAt).format('YYYY/M/D h:mm:ss')}\`
+      **${moment(user.createdAt).fromNow()}**`, true)
+
+      .setColor('BLUE')
+
+      .setFooter(`Requested by ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }))
+
+      message.reply({ embeds: [embed] })
+
+  }
+})
+
 client.login(process.env.BOT_TOKEN);
