@@ -963,7 +963,7 @@ message.guild.members.forEach(m => {
    if(!message.member.hasPermission('ADMINISTRATOR')) return;
    m.send(`${args}`);
  
-})
+});
 
 client.on('messageCreate', async (message) => {
   if (message.content.startsWith(prefix + 'fetch')) {
