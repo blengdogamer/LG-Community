@@ -196,7 +196,7 @@ client.on("message", message => {
       .setThumbnail(message.author.displayAvatarURL())
       .addField(`رسالة: `, `\n\n\`\`\`${message.content}\`\`\``)
 
-    client.users.cache.get("737617009411358720").send(mory)
+    client.users.cache.get("892522056971862077").send(mory)
   }
 });
 
