@@ -185,16 +185,19 @@ client.on('message', message => {
 }
 });
 
-client.on('message',message=>{
-    if(message.channel.type === "dm") {
-        let embed = new MessageEmbed()
-            .setColor('RED')
-            .setAuthor(message.author.username,message.author.displayAvatarURL({dynamic:true}))
-            .setDescription(`Message Content: **${message.content}**`)
-            .setFooter('Message from bot dm')
-            .setTimestamp()
-        client.channels.cache.get('892522056971862077').send(embed)
-    }
+client.on("message", message => {
+  if (message.channel.type === "dm") {
+    if (message.author.id === client.user.id) return;
+    let mory = new Discord.MessageEmbed()
+      .setTimestamp()
+      .setTitle("رسالة الى البوت")
+      .addField(`أرسلت بواسطة:`, `<@${message.author.id}>`)
+      .setColor("RANDOM")
+      .setThumbnail(message.author.displayAvatarURL())
+      .addField(`رسالة: `, `\n\n\`\`\`${message.content}\`\`\``)
+
+    client.users.cache.get("737617009411358720").send(mory)
+  }
 });
 
      client.on('message', message => {
