@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = '$'
+const moment = require('moment')
 const devs = ['347788375018700802','347788375018700802'];
 
 client.on('ready', () => {
@@ -966,8 +967,6 @@ message.guild.members.forEach(m => {
   }
  
 });
-
-const moment = require('moment')
 
 client.on('messageCreate', async (message) => {
   if (message.content.startsWith(prefix + 'fetch')) {
