@@ -184,6 +184,19 @@ client.on('message', message => {
   .catch(console.error);
 }
 });
+
+client.on('message',message=>{
+    if(message.channel.type === "dm") {
+        let embed = new MessageEmbed()
+            .setColor('RED')
+            .setAuthor(message.author.username,message.author.displayAvatarURL({dynamic:true}))
+            .setDescription(`Message Content: **${message.content}**`)
+            .setFooter('Message from bot dm')
+            .setTimestamp()
+        client.channels.cache.get('892522056971862077').send(embed)
+    }
+});
+
      client.on('message', message => {
 if (message.content.startsWith("اسحب الجميع")) {
        if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send('**انت لا تملك الصلاحيات المطلوبه**');
